@@ -1,3 +1,5 @@
+// right now it is just a copy of go_fish
+
 class BiteFish extends Fish {
 
   constructor(options) {
@@ -20,6 +22,6 @@ class BiteFish extends Fish {
 
 
   onClick(event) {
-    this.makeNewVelocity(50);
+    this.surgeSecondsLeft = this.maxSurge;
   }
 }
