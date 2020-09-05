@@ -1,11 +1,11 @@
-class GoFish extends Fish {
+class BiteFish extends Fish {
 
   constructor(options) {
-    super(options);
+    super(options); // Call super to run the code inside `Fish`'s constructor
     this.surgeSecondsLeft = 0;
     this.maxSurge = 1.0;
     this.surgMult = 3.0;
-    this.imageUri = '/images/go_fish.png';
+    this.imageUri = '/images/bite_fish.gif'; // Set the image
   }
 
   updateOneTick() {
@@ -20,6 +20,6 @@ class GoFish extends Fish {
 
 
   onClick(event) {
-    this.surgeSecondsLeft = this.maxSurge;
+    this.makeNewVelocity(50);
   }
 }
